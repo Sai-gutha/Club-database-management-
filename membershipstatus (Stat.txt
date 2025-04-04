@@ -1,0 +1,12 @@
+create table membershipstatus (StatusType VARCHAR2(30), MemberID INTEGER, FOREIGN KEY(MemberID) REFERENCES MEMBER(MemberID));
+
+INSERT INTO MembershipStatus VALUES ('Active', 5);
+INSERT INTO MembershipStatus VALUES ('Active', 10);
+INSERT INTO MembershipStatus VALUES ('Inactive', 4);
+INSERT INTO MembershipStatus VALUES ('Active', 6);
+INSERT INTO MembershipStatus VALUES ('Inactive',  7);
+INSERT INTO MembershipStatus VALUES ('Active', 1);
+INSERT INTO MembershipStatus VALUES ('Active', 3);
+INSERT INTO MembershipStatus VALUES ('Inactive', 8);
+INSERT INTO MembershipStatus VALUES ('Inactive', 2);
+INSERT INTO MembershipStatus VALUES ('Active', 9);

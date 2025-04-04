@@ -1,0 +1,12 @@
+create table member (MemberID int PRIMARY KEY, Name varchar(25), Contact Varchar(25), Address varchar(255));
+ 
+INSERT INTO Member VALUES (1, 'John Doe', '123-456-7890', '123 Main St');
+INSERT INTO Member VALUES (2, 'John', '789-526-1234', '13th street');
+INSERT INTO Member VALUES (3, 'Anthony', '635-489-2587', 'Westend st');
+INSERT INTO Member VALUES (4, 'Daniel', '456-896-2587', 'baecon terrace');
+INSERT INTO Member VALUES (5, 'Henry joseph', '258-789-6354', 'Albany Avenue');
+INSERT INTO Member VALUES (6, 'Johnson', '789-589-4523', 'glenmade ct');
+INSERT INTO Member VALUES (7, 'Sai', '789-456-1230', '456 whisper dr');
+INSERT INTO Member VALUES (8, 'Albert', '564-897-3210', '145 whiney apts');
+INSERT INTO Member VALUES (9, 'Dodge Rivers', '5897-635-2146', '1580 telegraph rd');
+INSERT INTO Member VALUES (10, 'Willson', '456-897-2569', '123 campbell st');

@@ -1,0 +1,57 @@
+SQL queries for create and insert records in the table:
+Member: (create and insert SQL queries of this table).
+create table member (MemberID int PRIMARY KEY, Name varchar(25), Contact Varchar(25), Address varchar(255));
+ 
+INSERT INTO Member VALUES (1, 'John Doe', '123-456-7890', '123 Main St');
+INSERT INTO Member VALUES (2, 'John', '789-526-1234', '13th street');
+INSERT INTO Member VALUES (3, 'Anthony', '635-489-2587', 'Westend st');
+INSERT INTO Member VALUES (4, 'Daniel', '456-896-2587', 'baecon terrace');
+INSERT INTO Member VALUES (5, 'Henry joseph', '258-789-6354', 'Albany Avenue');
+INSERT INTO Member VALUES (6, 'Johnson', '789-589-4523', 'glenmade ct');
+INSERT INTO Member VALUES (7, 'Sai', '789-456-1230', '456 whisper dr');
+INSERT INTO Member VALUES (8, 'Albert', '564-897-3210', '145 whiney apts');
+INSERT INTO Member VALUES (9, 'Dodge Rivers', '5897-635-2146', '1580 telegraph rd');
+INSERT INTO Member VALUES (10, 'Willson', '456-897-2569', '123 campbell st');
+
+Membership Status: (create and insert SQL queries in this table).
+create table membershipstatus (StatusType VARCHAR2(30), MemberID INTEGER, FOREIGN KEY(MemberID) REFERENCES MEMBER(MemberID));
+
+INSERT INTO MembershipStatus VALUES ('Active', 5);
+INSERT INTO MembershipStatus VALUES ('Active', 10);
+INSERT INTO MembershipStatus VALUES ('Inactive', 4);
+INSERT INTO MembershipStatus VALUES ('Active', 6);
+INSERT INTO MembershipStatus VALUES ('Inactive',  7);
+INSERT INTO MembershipStatus VALUES ('Active', 1);
+INSERT INTO MembershipStatus VALUES ('Active', 3);
+INSERT INTO MembershipStatus VALUES ('Inactive', 8);
+INSERT INTO MembershipStatus VALUES ('Inactive', 2);
+INSERT INTO MembershipStatus VALUES ('Active', 9);
+
+
+Event: (create and insert SQL queries of this table).
+create table event ("EventID" number PRIMARY KEY, "Name" varchar2(60), "Date" DATE);
+
+INSERT INTO EVENT VALUES (1, 'Social Gathering', TO_DATE('2023-12-02', 'YYYY-MM-DD'));
+INSERT INTO EVENT VALUES (2, 'Christmas party', TO_DATE('2023-12-23', 'YYYY-MM-DD'));
+INSERT INTO EVENT VALUES (3, 'musical concert', TO_DATE('2023-12-29', 'YYYY-MM-DD'));
+INSERT INTO EVENT VALUES (4, 'NEW YEAR Party', TO_DATE('2023-12-31', 'YYYY-MM-DD'));
+INSERT INTO EVENT VALUES (5, 'DJ Night', TO_DATE('2023-12-20', 'YYYY-MM-DD'));
+INSERT INTO EVENT VALUES (6, 'club anniversory', TO_DATE('2023-12-21', 'YYYY-MM-DD'));
+INSERT INTO EVENT VALUES (7, 'birthday parties', TO_DATE('2023-12-10', 'YYYY-MM-DD'));
+INSERT INTO EVENT VALUES (8, 'halloween party', TO_DATE('2023-10-31', 'YYYY-MM-DD'));
+INSERT INTO EVENT VALUES (9, 'fall feast', TO_DATE('2023-11-30', 'YYYY-MM-DD'));
+INSERT INTO EVENT VALUES (10, 'Dinner', TO_DATE('2023-12-07', 'YYYY-MM-DD'));
+
+Payment: (create and insert SQL queries of this table).
+create table Payment ("PaymentID" int PRIMARY KEY, MemberID int, "Date" DATE, "Amount" DECIMAL(10, 2), FOREIGN KEY (MemberID) REFERENCES member(MemberID));
+
+INSERT INTO Payment VALUES (0042, 1, TO_DATE('2023-01-01','YYYY-MM-DD'), 50.00);
+INSERT INTO Payment VALUES (0733, 3, TO_DATE('2023-12-20','YYYY-MM-DD'), 50.00);
+INSERT INTO Payment VALUES (0050, 4, TO_DATE('2023-11-27','YYYY-MM-DD'), 50.00);
+INSERT INTO Payment VALUES (2000, 10, TO_DATE('2023-11-26','YYYY-MM-DD'), 50.00);
+INSERT INTO Payment VALUES (1000, 9, TO_DATE('2023-11-25','YYYY-MM-DD'), 50.00);
+INSERT INTO Payment VALUES (1054, 8, TO_DATE('2023-11-29','YYYY-MM-DD'), 50.00);
+INSERT INTO Payment VALUES (0070, 2, TO_DATE('2023-12-10','YYYY-MM-DD'), 50.00);
+INSERT INTO Payment VALUES (0200, 6, TO_DATE('2023-12-04','YYYY-MM-DD'), 50.00);
+INSERT INTO Payment VALUES (3007, 5, TO_DATE('2023-12-05','YYYY-MM-DD'), 50.00);
+INSERT INTO Payment VALUES (0040, 7, TO_DATE('2023-11-30','YYYY-MM-DD'), 50.00);
